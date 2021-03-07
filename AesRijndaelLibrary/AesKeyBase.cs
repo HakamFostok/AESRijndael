@@ -11,13 +11,7 @@ namespace AesRijndaelLibrary
         internal int NK { get; private set; }
         public List<byte> Subkeys { get; set; }
 
-        public int NR
-        {
-            get
-            {
-                return dic[NK];
-            }
-        }
+        public int NR => dic[NK];
 
         static AesKeyBase()
         {
@@ -42,13 +36,7 @@ namespace AesRijndaelLibrary
             Subkeys = key.ToList();
         }
 
-        public int Length
-        {
-            get
-            {
-                return NK;
-            }
-        }
+        public int Length => NK;
 
         public IEnumerator<byte> GetEnumerator()
         {
@@ -66,27 +54,23 @@ namespace AesRijndaelLibrary
         internal Word[] KeyExpansion()
         {
             List<Word> words = new List<Word>();
+
             int i = 0;
             for (i = 0; i < NK; i++)
-            {
                 words.Add(new Word(Subkeys[i * 4], Subkeys[i * 4 + 1], Subkeys[i * 4 + 2], Subkeys[i * 4 + 3]));
-
-            }
 
             // already i = Nk;
             for (; i < Extensions.NB * (NR + 1); i++)
             {
                 Word temp = words[i - 1];
+
                 if (i % NK == 0)
-                {
                     temp = Word.Xor((temp.RotWord()).SubWord(), Rcon(i / NK));
-                }
                 else if (NK > 6 && i % NK == 4)
-                {
                     temp = temp.SubWord();
-                }
-                Word ttt = Word.Xor(words[i - NK], temp);
-                words.Add(ttt);
+
+                Word word = Word.Xor(words[i - NK], temp);
+                words.Add(word);
             }
 
             return words.ToArray<Word>();

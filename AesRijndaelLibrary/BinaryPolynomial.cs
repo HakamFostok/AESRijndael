@@ -62,18 +62,16 @@ namespace AesRijndaelLibrary
         public static BinaryPolynomial ComplexOperation(int first, int second)
         {
             if (first == 0 || second == 0)
-            {
                 return new BinaryPolynomial(0);
-            }
+            
             if (first == 1)
-            {
                 return new BinaryPolynomial(second);
-            }
+            
             if (second == 1)
-            {
                 return new BinaryPolynomial(first);
-            }
-            return ReminderConstant(Multiply(new BinaryPolynomial(first), new BinaryPolynomial(second)));
+
+            var result = Multiply(new BinaryPolynomial(first), new BinaryPolynomial(second));
+            return ReminderConstant(result);
         }
 
         public static BinaryPolynomial Reminder(BinaryPolynomial up, BinaryPolynomial down)

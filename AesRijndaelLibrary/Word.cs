@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -16,10 +17,8 @@ namespace AesRijndaelLibrary
         internal Word(List<byte> fourBytes)
         {
             if (fourBytes.Count != 4)
-            {
                 throw new ArgumentOutOfRangeException("fourBytes", "Length of fourBytes must be 4");
-            }
-            //ValidateIndex(fourBytes.Count);
+            
             bytes = new List<byte>();
             bytes.AddRange(fourBytes.Select(n => n));
         }
@@ -46,12 +45,17 @@ namespace AesRijndaelLibrary
             }
         }
 
-        internal static Word Xor(Word w1, Word w2)
-        {
-            return new Word(w1.Select((b, index) => Convert.ToByte(b ^ w2[index])).ToList());
-        }
+        internal static Word Xor(Word w1, Word w2) =>
+            new Word(w1.Select((b, index) => Convert.ToByte(b ^ w2[index])).ToList());
 
-        IEnumerator<byte> System.Collections.Generic.IEnumerable<byte>.GetEnumerator()
+        internal Word RotWord() =>
+            new Word(this[1], this[2], this[3], this[0]);
+
+        internal Word SubWord() =>
+            new Word(this.Select(b => Table.SBox[b.GetUpperPart(), b.GetLowerPart()]).ToList());
+        
+        #region IEnumerable
+        IEnumerator<byte> IEnumerable<byte>.GetEnumerator()
         {
             for (int index = 0; index < bytes.Count(); index++)
             {
@@ -59,21 +63,9 @@ namespace AesRijndaelLibrary
             }
         }
 
-        System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator()
-        {
+        IEnumerator IEnumerable.GetEnumerator() =>
             throw new NotImplementedException();
-        }
 
-        internal Word RotWord()
-        {
-            return new Word(this[1], this[2], this[3], this[0]);
-        }
-
-        internal Word SubWord()
-        {
-            // this function has to be modified because we write the code twice.
-            //Functions f = new Functions();
-            return new Word(this.Select(b => Table.SBox[b.GetUpperPart(), b.GetLowerPart()]).ToList());
-        }
+        #endregion
     }
 }
