@@ -10,12 +10,6 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AesInterface", "AESInterface\AesInterface.csproj", "{F162C1DA-D60C-4DE5-AF97-EE0C6AFC407E}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SoluionItems", "SoluionItems", "{A7AA5E1A-A22D-486E-9606-3B2A487946DD}"
-	ProjectSection(SolutionItems) = preProject
-		E.txt = E.txt
-		F.txt = F.txt
-		InvSBox.txt = InvSBox.txt
-		SBox.txt = SBox.txt
-	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docs", "Docs", "{754F426D-73F7-44E2-A02E-A5689EDCA103}"
 	ProjectSection(SolutionItems) = preProject
