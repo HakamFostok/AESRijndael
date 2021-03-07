@@ -187,7 +187,7 @@ namespace AesRijndaelLibrary
 
             if (resultOfSum > byte.MaxValue)
             {
-                resultOfSum = resultOfSum - byte.MaxValue;
+                resultOfSum -= byte.MaxValue;
             }
 
             byte resultByByte = Convert.ToByte(resultOfSum);

@@ -57,12 +57,6 @@ namespace AesRijndaelLibrary
                 values =
                     new SortedSet<int>(left.Concat(right).Except(left.Intersect(right)).Distinct())
             };
-
-            //return new BinaryPolynomial
-            //{
-            //    values =
-            //    new SortedSet<int>(left.Intersect(right))
-            //};
         }
 
         public static BinaryPolynomial ComplexOperation(int first, int second)
@@ -79,7 +73,7 @@ namespace AesRijndaelLibrary
             {
                 return new BinaryPolynomial(first);
             }
-            return BinaryPolynomial.ReminderConstant(BinaryPolynomial.Multiply(new BinaryPolynomial(first), new BinaryPolynomial(second)));
+            return ReminderConstant(Multiply(new BinaryPolynomial(first), new BinaryPolynomial(second)));
         }
 
         public static BinaryPolynomial Reminder(BinaryPolynomial up, BinaryPolynomial down)
@@ -88,7 +82,7 @@ namespace AesRijndaelLibrary
 
             while (result.Last() >= down.Last())
             {
-                result = BinaryPolynomial.Xor(result, BinaryPolynomial.MultiplyByNumber(down, result.Last() - down.Last()));
+                result = Xor(result, MultiplyByNumber(down, result.Last() - down.Last()));
             }
 
             return result;
@@ -117,10 +111,8 @@ namespace AesRijndaelLibrary
             }
         }
 
-        System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator()
-        {
+        IEnumerator IEnumerable.GetEnumerator() =>
             throw new NotImplementedException();
-        }
 
         public static explicit operator int(BinaryPolynomial left)
         {

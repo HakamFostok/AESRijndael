@@ -22,10 +22,8 @@ namespace AesRijndaelLibrary
             return hexarevers[higher].ToString() + hexarevers[lower].ToString();
         }
 
-        public static byte GetLowerPart(this byte value)
-        {
-            return Convert.ToByte(value & 15);
-        }
+        public static byte GetLowerPart(this byte value) =>
+            Convert.ToByte(value & 15);
 
         public static byte GetUpperPart(this byte value)
         {
@@ -36,6 +34,13 @@ namespace AesRijndaelLibrary
 
         public static byte GetByteFromHex(this string name)
         {
+            //return name.Length switch
+            //{
+            //    1 => Convert.ToByte(hexa[name[0]]),
+            //    2 => Convert.ToByte(hexa[name[0]] * 16 + hexa[name[1]]),
+            //    _ => throw new ArgumentException("Length must be 1 or 2"),
+            //};
+
             if (name.Length == 2)
             {
                 return Convert.ToByte(hexa[name[0]] * 16 + hexa[name[1]]);
