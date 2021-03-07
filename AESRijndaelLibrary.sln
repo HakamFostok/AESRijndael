@@ -1,13 +1,13 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31025.194
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AesRijndaelLibrary", "AESRijndaelLibrary\AesRijndaelLibrary.csproj", "{CEBF5196-9675-4B60-BAAD-71136441BF64}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AesRijndaelTest", "AESRijndaelTest\AesRijndaelTest.csproj", "{F11BA261-3C1B-42AF-9C56-7731F9AA3F0F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AesInterface", "AESInterface\AesInterface.csproj", "{F162C1DA-D60C-4DE5-AF97-EE0C6AFC407E}"
-EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "AesInstallation", "AesInstallation\AesInstallation.vdproj", "{B8EDBD15-3C0F-4E56-8AD4-ECF5706D34BE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -49,14 +49,11 @@ Global
 		{F162C1DA-D60C-4DE5-AF97-EE0C6AFC407E}.Release|Mixed Platforms.Build.0 = Release|x86
 		{F162C1DA-D60C-4DE5-AF97-EE0C6AFC407E}.Release|x86.ActiveCfg = Release|x86
 		{F162C1DA-D60C-4DE5-AF97-EE0C6AFC407E}.Release|x86.Build.0 = Release|x86
-		{B8EDBD15-3C0F-4E56-8AD4-ECF5706D34BE}.Debug|Any CPU.ActiveCfg = Debug
-		{B8EDBD15-3C0F-4E56-8AD4-ECF5706D34BE}.Debug|Mixed Platforms.ActiveCfg = Debug
-		{B8EDBD15-3C0F-4E56-8AD4-ECF5706D34BE}.Debug|x86.ActiveCfg = Debug
-		{B8EDBD15-3C0F-4E56-8AD4-ECF5706D34BE}.Release|Any CPU.ActiveCfg = Release
-		{B8EDBD15-3C0F-4E56-8AD4-ECF5706D34BE}.Release|Mixed Platforms.ActiveCfg = Release
-		{B8EDBD15-3C0F-4E56-8AD4-ECF5706D34BE}.Release|x86.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D02A79E1-1FA3-4B6C-9718-D47467147791}
 	EndGlobalSection
 EndGlobal
