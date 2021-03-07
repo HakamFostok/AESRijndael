@@ -1,0 +1,45 @@
+2021-03-07 14:33:15.805 +03:00 [INF] MSBuild registered from C:\Program Files\dotnet\sdk\5.0.200\
+2021-03-07 14:33:15.840 +03:00 [INF] Registered 1 extensions:
+	Default extension
+2021-03-07 14:33:17.552 +03:00 [INF] Initializing upgrade step Select an entrypoint
+2021-03-07 14:33:22.170 +03:00 [INF] Applying upgrade step Select an entrypoint
+2021-03-07 14:33:27.531 +03:00 [INF] Upgrade step Select an entrypoint applied successfully
+2021-03-07 14:33:30.358 +03:00 [INF] Initializing upgrade step Back up project
+2021-03-07 14:33:34.810 +03:00 [INF] Applying upgrade step Back up project
+2021-03-07 14:33:44.561 +03:00 [INF] Backing up C:\Users\user\source\repos\AESRijndaelLibrary\AesInterface to C:\Users\user\source\repos\AESRijndaelLibrary\AesInterface.backup
+2021-03-07 14:33:44.700 +03:00 [WRN] Could not copy file C:\Users\user\source\repos\AESRijndaelLibrary\AesInterface\log.txt due to 'The process cannot access the file 'C:\Users\user\source\repos\AESRijndaelLibrary\AesInterface\log.txt' because it is being used by another process.'
+2021-03-07 14:33:45.082 +03:00 [INF] Project backed up to C:\Users\user\source\repos\AESRijndaelLibrary\AesInterface.backup
+2021-03-07 14:33:45.083 +03:00 [INF] Upgrade step Back up project applied successfully
+2021-03-07 14:33:51.739 +03:00 [INF] Initializing upgrade step Convert project file to SDK style
+2021-03-07 14:33:55.341 +03:00 [INF] Applying upgrade step Convert project file to SDK style
+2021-03-07 14:33:55.346 +03:00 [INF] Converting project file format with try-convert
+2021-03-07 14:33:57.084 +03:00 [INF] [try-convert] Conversion complete!
+2021-03-07 14:33:57.329 +03:00 [INF] Project file converted successfully! The project may require additional changes to build successfully against the new .NET target.
+2021-03-07 14:33:59.246 +03:00 [INF] Upgrade step Convert project file to SDK style applied successfully
+2021-03-07 14:34:01.978 +03:00 [INF] Initializing upgrade step Update TFM
+2021-03-07 14:34:03.685 +03:00 [INF] Applying upgrade step Update TFM
+2021-03-07 14:34:06.470 +03:00 [INF] Upgrade step Update TFM applied successfully
+2021-03-07 14:34:14.569 +03:00 [INF] Initializing upgrade step Update NuGet packages
+2021-03-07 14:34:16.360 +03:00 [INF] Reference to .NET Upgrade Assistant analyzer package (Microsoft.DotNet.UpgradeAssistant.Extensions.Default.Analyzers, version 0.2.212405) needs added
+2021-03-07 14:34:19.429 +03:00 [INF] Adding Microsoft.Windows.Compatibility 5.0.2
+2021-03-07 14:34:19.432 +03:00 [INF] Packages to be addded:
+Microsoft.DotNet.UpgradeAssistant.Extensions.Default.Analyzers, Version=0.2.212405
+Microsoft.Windows.Compatibility, Version=5.0.2
+2021-03-07 14:34:22.073 +03:00 [INF] Applying upgrade step Update NuGet packages
+2021-03-07 14:34:22.084 +03:00 [INF] Adding package reference: Microsoft.DotNet.UpgradeAssistant.Extensions.Default.Analyzers, Version=0.2.212405
+2021-03-07 14:34:22.086 +03:00 [INF] Adding package reference: Microsoft.Windows.Compatibility, Version=5.0.2
+2021-03-07 14:34:24.903 +03:00 [INF] Upgrade step Update NuGet packages applied successfully
+2021-03-07 14:34:28.805 +03:00 [INF] Initializing upgrade step Add template files
+2021-03-07 14:34:28.820 +03:00 [INF] 0 expected template items needed
+2021-03-07 14:34:28.821 +03:00 [INF] Initializing upgrade step Upgrade app config files
+2021-03-07 14:34:28.848 +03:00 [INF] Found 0 app settings for upgrade: 
+2021-03-07 14:34:28.855 +03:00 [INF] 0 web page namespace imports need upgraded: 
+2021-03-07 14:34:28.857 +03:00 [INF] Initializing upgrade step Update C# source
+2021-03-07 14:34:30.790 +03:00 [INF] Initializing upgrade step Move to next project
+2021-03-07 14:34:33.504 +03:00 [INF] Applying upgrade step Move to next project
+2021-03-07 14:34:33.506 +03:00 [INF] Upgrade step Move to next project applied successfully
+2021-03-07 14:34:39.617 +03:00 [INF] Initializing upgrade step Finalize Solution
+2021-03-07 14:34:49.738 +03:00 [INF] Applying upgrade step Finalize Solution
+2021-03-07 14:34:49.741 +03:00 [INF] Upgrade step Finalize Solution applied successfully
+2021-03-07 14:34:53.144 +03:00 [INF] Upgrade has completed. Please review any changes.
+2021-03-07 14:34:53.147 +03:00 [INF] Saving upgrade progress file at C:\Users\user\source\repos\AESRijndaelLibrary\AesInterface\.upgrade-assistant
