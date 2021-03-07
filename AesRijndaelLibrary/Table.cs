@@ -19,10 +19,10 @@ namespace AesRijndaelLibrary
 
         static Table()
         {
-            SBox = new Table("SBox.txt");
-            InverseSBox = new Table("InvSBox.txt");
-            TableE = new Table("E.txt");
-            TableL = new Table("L.txt");
+            SBox = new Table("files\\SBox.txt");
+            InverseSBox = new Table("files\\InvSBox.txt");
+            TableE = new Table("files\\E.txt");
+            TableL = new Table("files\\L.txt");
         }
 
         private Table(string fileName)
