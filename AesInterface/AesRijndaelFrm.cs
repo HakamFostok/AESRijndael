@@ -1,9 +1,9 @@
 ﻿using System;
-using System.Windows.Forms;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Drawing;
+using System.Linq;
+using System.Windows.Forms;
+
 using AesRijndaelLibrary;
 
 namespace AesInterface
@@ -51,12 +51,12 @@ namespace AesInterface
                 { btnFormat , new Tuple<string, string>("تنسيق","Format") },
                 { btnFont , new Tuple<string,string> ("الخط","Font") }
             };
-            
-            algorithms = new List<Tuple<AesBase, AesKeyBase, int, string>> 
+
+            algorithms = new List<Tuple<AesBase, AesKeyBase, int, string>>
             {
                 new Tuple<AesBase, AesKeyBase, int, string>(new Aes128(), new AesKey128(), 32, "000102030405060708090a0b0c0d0e0f"),
                 new Tuple<AesBase, AesKeyBase, int, string>(new Aes192(), new AesKey192(), 48, "000102030405060708090a0b0c0d0e0f1011121314151617"),
-                new Tuple<AesBase, AesKeyBase, int, string>(new Aes256(), new AesKey256(), 64, "000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f") 
+                new Tuple<AesBase, AesKeyBase, int, string>(new Aes256(), new AesKey256(), 64, "000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f")
             };
 
             currentSettings = new Properties.Settings();

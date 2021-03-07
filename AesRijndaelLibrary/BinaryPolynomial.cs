@@ -1,7 +1,7 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using System.Collections;
 
 namespace AesRijndaelLibrary
 {
@@ -38,13 +38,13 @@ namespace AesRijndaelLibrary
             {
                 if (value)
                 {
-                    values.Add(index); 
+                    values.Add(index);
                 }
                 else
                 {
                     if (values.Contains(index))
                     {
-                        values.Remove(index); 
+                        values.Remove(index);
                     }
                 }
             }

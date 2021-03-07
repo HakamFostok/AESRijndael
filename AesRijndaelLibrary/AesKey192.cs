@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace AesRijndaelLibrary
+﻿namespace AesRijndaelLibrary
 {
     public class AesKey192 : AesKeyBase
     {
