@@ -14,19 +14,19 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <None Update="files\E.txt">
+    <None Update="Files\E.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="files\F.txt">
+    <None Update="Files\F.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="files\InvSBox.txt">
+    <None Update="Files\InvSBox.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="files\L.txt">
+    <None Update="Files\L.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="files\SBox.txt">
+    <None Update="Files\SBox.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   
