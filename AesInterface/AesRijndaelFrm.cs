@@ -221,7 +221,7 @@ namespace AesInterface
             }
             catch (ArgumentOutOfRangeException)
             {
-                bytes.Add(text[text.Length - 1].ToString().GetByteFromHex());
+                bytes.Add(text[^1].ToString().GetByteFromHex());
             }
         }
 
@@ -299,7 +299,7 @@ namespace AesInterface
                 string textOfInput = source.Lines.Select(line => new string(line.Where(c => !char.IsWhiteSpace(c)).ToArray())).Aggregate((one, two) => one + two);
                 if (textOfInput.Length % 32 != 0)
                 {
-                    textOfInput = textOfInput + new string(Enumerable.Repeat<char>('0', 32 - (textOfInput.Length % 32)).ToArray());
+                    textOfInput += new string(Enumerable.Repeat<char>('0', 32 - (textOfInput.Length % 32)).ToArray());
                 }
 
                 for (int index = 0; index < textOfInput.Length / 32; index++)
