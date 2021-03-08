@@ -15,13 +15,7 @@ namespace AesInterface
         private List<Tuple<AesBase, AesKeyBase, int, string>> algorithms { get; set; }
         private int Index { get; set; }
 
-        private Tuple<AesBase, AesKeyBase, int, string> SelectedTuple
-        {
-            get
-            {
-                return algorithms[Index];
-            }
-        }
+        private Tuple<AesBase, AesKeyBase, int, string> SelectedTuple => algorithms[Index];
 
         public FrmAesRijndael()
         {
