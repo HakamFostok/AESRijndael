@@ -24,14 +24,9 @@ namespace AesRijndael.Test
             }
         }
 
-        private List<string> FormatRichTextBox(string input)
+        private List<string> PartitionTheTextTo32Chunck(string textOfInput)
         {
-            if (input.Trim() == "")
-                return new List<string>();
-
             List<string> totalInput = new List<string>();
-            string textOfInput = new string(input.Where(c => !char.IsWhiteSpace(c)).ToArray());
-
             if (textOfInput.Length % 32 != 0)
                 textOfInput += new string(Enumerable.Repeat<char>('0', 32 - (textOfInput.Length % 32)).ToArray());
 
@@ -76,8 +71,10 @@ namespace AesRijndael.Test
         {
             Aes256 algo = new();
             byte[] key = HandleTheKey256();
-            var input = new List<byte>();
-            GetHexadecimal(input, "00112233445566778899AABBCCDDEEFF");
+            
+            var text = "00112233445566778899AABBCCDDEEFF";
+            var input = HandleTheInput(PartitionTheTextTo32Chunck(text));
+
             var encryptedOutput = algo.Encrypt(input.ToArray(), new AesKey256(key));
 
             string outputByte = string.Join("", encryptedOutput.Select(oneByte => oneByte.GetHexadecimal()));
@@ -91,8 +88,9 @@ namespace AesRijndael.Test
         {
             Aes256 algo = new();
             byte[] key = HandleTheKey256();
-            var input = new List<byte>();
-            GetHexadecimal(input, "8EA2B7CA516745BFEAFC49904B496089");
+            var text = "8EA2B7CA516745BFEAFC49904B496089";
+            var input = HandleTheInput(PartitionTheTextTo32Chunck(text));
+
             var encryptedOutput = algo.Decrypt(input.ToArray(), new AesKey256(key));
 
             string outputByte = string.Join("", encryptedOutput.Select(oneByte => oneByte.GetHexadecimal()));
