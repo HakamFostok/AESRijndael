@@ -10,27 +10,25 @@ namespace AesRijndaelLibrary
         {
             byte[] keyBytes = GetTheByteArrayOfTheKey(key);
             AesKeyBase keybase = new AesKey128(keyBytes);
-            return Encrypt(text, key, new Aes128(), keybase);
+            return Encrypt(text, new Aes128(), keybase);
         }
 
         public string Encrypt192(string text, string key)
         {
             byte[] keyBytes = GetTheByteArrayOfTheKey(key);
             AesKeyBase keybase = new AesKey192(keyBytes);
-            return Encrypt(text, key, new Aes192(), keybase);
+            return Encrypt(text, new Aes192(), keybase);
         }
 
         public string Encrypt256(string text, string key)
         {
             byte[] keyBytes = GetTheByteArrayOfTheKey(key);
             AesKeyBase keybase = new AesKey256(keyBytes);
-            return Encrypt(text, key, new Aes256(), keybase);
+            return Encrypt(text, new Aes256(), keybase);
         }
 
-        private string Encrypt(string text, string key, AesBase algo, AesKeyBase baseKey)
+        private string Encrypt(string text, AesBase algo, AesKeyBase baseKey)
         {
-            byte[] keyBytes = GetTheByteArrayOfTheKey(key);
-
             List<string> chuncks = PartitionTheTextTo32Chunck(text);
             byte[] input = HandleTheInput(chuncks);
 
@@ -56,7 +54,7 @@ namespace AesRijndaelLibrary
 
         private List<string> PartitionTheTextTo32Chunck(string textOfInput)
         {
-            List<string> totalInput = new ();
+            List<string> totalInput = new();
             if (textOfInput.Length % 32 != 0)
                 textOfInput += new string(Enumerable.Repeat<char>('0', 32 - (textOfInput.Length % 32)).ToArray());
 
