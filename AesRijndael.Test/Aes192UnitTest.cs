@@ -68,15 +68,9 @@ namespace AesRijndael.Test
         [TestMethod]
         public void Aes192_Encrypt_Success()
         {
-            Aes192 algo = new();
-            byte[] key = HandleTheKey192();
-
-            var text = "00112233445566778899AABBCCDDEEFF";
-            var input = HandleTheInput(PartitionTheTextTo32Chunck(text));
-            
-            var encryptedOutput = algo.Encrypt(input.ToArray(), new AesKey192(key));
-
-            string outputByte = string.Join("", encryptedOutput.Select(oneByte => oneByte.GetHexadecimal()));
+            Encryptor encryptor = new();
+            var outputByte = encryptor.Encrypt192("00112233445566778899aabbccddeeff",
+                "000102030405060708090a0b0c0d0e0f1011121314151617");
 
             string expectedOutput = "DDA97CA4864CDFE06EAF70A0EC0D7191";
             Assert.AreEqual(expectedOutput, outputByte);

@@ -65,14 +65,9 @@ namespace AesRijndael.Test
         [TestMethod]
         public void Aes128_Encrypt_Success()
         {
-            Aes128 algo = new Aes128();
-            byte[] key = HandleTheKey128();
-
-            var text = "00112233445566778899aabbccddeeff";
-            var input = HandleTheInput(PartitionTheTextTo32Chunck(text));
-            var encryptedOutput = algo.Encrypt(input.ToArray(), new AesKey128(key));
-
-            string outputByte = string.Join("", encryptedOutput.Select(oneByte => oneByte.GetHexadecimal()));
+            Encryptor encryptor = new();
+            var outputByte =  encryptor.Encrypt128("00112233445566778899aabbccddeeff",
+                "000102030405060708090a0b0c0d0e0f");
 
             string expectedOutput = "69C4E0D86A7B0430D8CDB78070B4C55A";
             Assert.AreEqual(expectedOutput, outputByte);
