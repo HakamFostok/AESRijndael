@@ -1,5 +1,6 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using AesRijndaelLibrary;
+using System.Linq;
 
 namespace AesRijndael.Test
 {
@@ -24,6 +25,18 @@ namespace AesRijndael.Test
             Decreptor encryptor = new();
             string outputByte = encryptor.Decrept192(OUTPUT, KEY);
             Assert.AreEqual(INPUT, outputByte);
+        }
+
+        [TestMethod]
+        public void Aes192_EncryptAndDecrept_Success()
+        {
+            Encryptor encryptor = new();
+            Decreptor decreptor = new();
+            string input = "00987ABCDEF1234";
+            string encreptedOutput = encryptor.Encrypt128(input, KEY);
+            string decreptedOutput = decreptor.Decrept128(encreptedOutput, KEY);
+
+            Assert.AreEqual(input, new string(decreptedOutput.Take(input.Length).ToArray()));
         }
     }
 }
