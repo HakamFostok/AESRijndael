@@ -35,7 +35,5 @@ namespace AesRijndaelLibrary
 
             return string.Join("", encryptedOutput.Select(oneByte => oneByte.GetHexadecimal()));
         }
-
-
     }
 }
