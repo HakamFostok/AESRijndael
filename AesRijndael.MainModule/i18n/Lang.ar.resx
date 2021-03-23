@@ -135,4 +135,7 @@
   <data name="Language" xml:space="preserve">
     <value>لغة</value>
   </data>
+  <data name="Operation" xml:space="preserve">
+    <value>عملية</value>
+  </data>
 </root>

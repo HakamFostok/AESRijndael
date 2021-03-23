@@ -113,5 +113,14 @@ namespace AesRijndael.MainModule.i18n {
                 return ResourceManager.GetString("Language", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Operation.
+        /// </summary>
+        public static string Operation {
+            get {
+                return ResourceManager.GetString("Operation", resourceCulture);
+            }
+        }
     }
 }
