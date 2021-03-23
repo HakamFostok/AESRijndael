@@ -10,5 +10,8 @@ namespace AesRijndael.MainModule.ViewModels
 {
     public class TextViewModel : BaseViewModel
     {
+        public bool IsEncryptionReadOnly { get; set; }
+        public bool IsDecryptionReadOnly { get; set; }
+
     }
 }

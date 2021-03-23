@@ -12,10 +12,22 @@
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
 
-        <StackPanel Orientation="Horizontal" Grid.Row="0">
-            <local:SelectLanguageView/>
-            <local:SelectOperationView/>
-            <local:SelectKeyView/>
-        </StackPanel>
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <local:SelectLanguageView Grid.Column="0"/>
+            <local:SelectOperationView Grid.Column="1"/>
+            <local:SelectKeyView Grid.Column="2"/>
+            <local:EnterKeyView Grid.Column="3"/>
+        </Grid>
+
+        <Grid Grid.Row="1">
+            <local:TextView/>
+            
+        </Grid>
     </Grid>
 </UserControl>

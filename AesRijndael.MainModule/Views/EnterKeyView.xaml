@@ -6,7 +6,16 @@
              xmlns:local="clr-namespace:AesRijndael.MainModule.Views"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Grid>
-            
-    </Grid>
+    <GroupBox Header="Key" Margin="0,6,0,-6">
+        <StackPanel>
+            <TextBox Text="{Binding KeyValue}"/>
+
+            <Button Content="Encrypt/Decrypt"/>
+            <Button Content="Format"/>
+            <Button Content="About"/>
+            <Button Content="Clear"/>
+            <Button Content="Font"/>
+
+        </StackPanel>
+    </GroupBox>
 </UserControl>

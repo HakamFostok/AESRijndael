@@ -7,7 +7,7 @@
         xmlns:core="clr-namespace:AesRijndael.Core;assembly=AesRijndael.Core"
         xmlns:prism="http://prismlibrary.com/"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="AES Rijndael Algorithm" Height="450" Width="800">
     <Grid>
         <ContentControl prism:RegionManager.RegionName="{x:Static core:RegionNames.MainRegion}" />
     </Grid>

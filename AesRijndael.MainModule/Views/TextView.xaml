@@ -7,6 +7,12 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-            
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <RichTextBox IsReadOnly="{Binding IsEncryptionReadOnly}" Margin="10" Grid.Column="0"></RichTextBox>
+        <RichTextBox IsReadOnly="{Binding IsDecryptionReadOnly}" Margin="10" Grid.Column="1"></RichTextBox>
+
     </Grid>
 </UserControl>
