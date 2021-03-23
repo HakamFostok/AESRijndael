@@ -12,7 +12,7 @@
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
 
-        <StackPanel Grid.Row="0">
+        <StackPanel Orientation="Horizontal" Grid.Row="0">
             <local:SelectLanguageView/>
             <local:SelectOperationView/>
             <local:SelectKeyView/>

@@ -1,5 +1,7 @@
 ﻿using System.Windows;
 
+using AesRijndael.SharedModule;
+
 using Prism.Ioc;
 using Prism.Modularity;
 
@@ -22,6 +24,7 @@ namespace AesRijndael.Shell
 
         protected override void ConfigureModuleCatalog(IModuleCatalog moduleCatalog)
         {
+            moduleCatalog.AddModule<SharedModule.SharedModule>();
             moduleCatalog.AddModule<MainModule.MainModule>();
         }
     }

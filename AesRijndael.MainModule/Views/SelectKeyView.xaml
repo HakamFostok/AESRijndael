@@ -6,7 +6,11 @@
              xmlns:local="clr-namespace:AesRijndael.MainModule.Views"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Grid>
-            
-    </Grid>
+    <GroupBox Header="Language">
+        <StackPanel Margin="5">
+            <RadioButton GroupName="keyType" Content="Aes 128"></RadioButton>
+            <RadioButton GroupName="keyType" Content="Aes 192"></RadioButton>
+            <RadioButton GroupName="keyType" Content="Aes 256"></RadioButton>
+        </StackPanel>
+    </GroupBox>
 </UserControl>

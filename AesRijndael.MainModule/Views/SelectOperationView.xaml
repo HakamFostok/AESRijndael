@@ -6,7 +6,10 @@
              xmlns:local="clr-namespace:AesRijndael.MainModule.Views"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Grid>
-            
-    </Grid>
+    <GroupBox Header="Operation">
+        <StackPanel Margin="5">
+            <RadioButton Content="Encrypt"></RadioButton>
+            <RadioButton Content="Decrept"></RadioButton>
+        </StackPanel>
+    </GroupBox>
 </UserControl>

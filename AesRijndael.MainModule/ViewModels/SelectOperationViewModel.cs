@@ -4,9 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+using AesRijndael.Core;
+
 namespace AesRijndael.MainModule.ViewModels
 {
-    class SelectOperationViewModel
+    public class SelectOperationViewModel : BaseViewModel
     {
-    }
+    }   
 }

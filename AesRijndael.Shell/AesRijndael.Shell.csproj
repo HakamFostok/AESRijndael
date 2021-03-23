@@ -15,5 +15,6 @@
 	<ItemGroup>
 		<ProjectReference Include="..\AesRijndael.Core\AesRijndael.Core.csproj" />
 		<ProjectReference Include="..\AesRijndael.MainModule\AesRijndael.MainModule.csproj" />
+		<ProjectReference Include="..\AesRijndael.SharedModule\AesRijndael.SharedModule.csproj" />
 	</ItemGroup>
 </Project>
