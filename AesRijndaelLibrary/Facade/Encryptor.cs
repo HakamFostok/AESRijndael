@@ -10,21 +10,34 @@ namespace AesRijndaelLibrary
         {
             byte[] keyBytes = GetTheByteArrayOfTheKey(key);
             AesKeyBase keybase = new AesKey128(keyBytes);
-            return Encrypt(text, new Aes128(), keybase);
+            return Encrypt(text, keybase);
         }
 
         public string Encrypt192(string text, string key)
         {
             byte[] keyBytes = GetTheByteArrayOfTheKey(key);
             AesKeyBase keybase = new AesKey192(keyBytes);
-            return Encrypt(text, new Aes192(), keybase);
+            return Encrypt(text, keybase);
         }
 
         public string Encrypt256(string text, string key)
         {
             byte[] keyBytes = GetTheByteArrayOfTheKey(key);
             AesKeyBase keybase = new AesKey256(keyBytes);
-            return Encrypt(text, new Aes256(), keybase);
+            return Encrypt(text, keybase);
+        }
+
+        public string Encrypt(string text, AesKeyBase baseKey)
+        {
+            AesBase algo = baseKey switch
+            {
+                AesKey128 => new Aes128(),
+                AesKey192 => new Aes192(),
+                AesKey256 => new Aes256(),
+                _ => throw new InvalidCastException("type is not supported"),
+            };
+
+            return Encrypt(text, algo, baseKey);
         }
 
         private string Encrypt(string text, AesBase algo, AesKeyBase baseKey)

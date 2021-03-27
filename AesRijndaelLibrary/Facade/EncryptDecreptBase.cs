@@ -4,24 +4,11 @@ using System;
 
 namespace AesRijndaelLibrary
 {
+
+    [Obsolete("Consider making those method as extension methods and remove this class")]
     public abstract class EncryptDecreptBase
     {
-        private static void GetHexadecimal(List<byte> bytes, string text)
-        {
-            try
-            {
-                for (int index = 0; index < text.Length; index += 2)
-                {
-                    bytes.Add(text.Substring(index, 2).GetByteFromHex());
-                }
-            }
-            catch (ArgumentOutOfRangeException)
-            {
-                bytes.Add(text[^1].ToString().GetByteFromHex());
-            }
-        }
-
-        protected List<string> PartitionTheTextTo32Chunck(string textOfInput)
+        protected static List<string> PartitionTheTextTo32Chunck(string textOfInput)
         {
             List<string> totalInput = new();
             if (textOfInput.Length % 32 != 0)
@@ -33,28 +20,21 @@ namespace AesRijndaelLibrary
             return totalInput;
         }
 
-        protected byte[] HandleTheInput(List<string> list)
+        protected static byte[] HandleTheInput(List<string> list)
         {
-            List<byte> bytesOfText = new();
-
             string text = list.Select(line => new string(line.Where(ch => !char.IsWhiteSpace(ch)).ToArray())).Aggregate((one, two) => one + two);
-            GetHexadecimal(bytesOfText, text);
+            List<byte> bytesOfText = text.ConvertKeyFromStringToByteArray();
 
             // make the length of the bytes array multiplied by 16.
             while ((bytesOfText.Count % 16) != 0)
                 bytesOfText.Add(0);
 
             return bytesOfText.ToArray();
-
         }
 
-        protected byte[] GetTheByteArrayOfTheKey(string key)
+        protected static byte[] GetTheByteArrayOfTheKey(string key)
         {
-            List<byte> bytesOfKey = new();
-
-            GetHexadecimal(bytesOfKey, key);
-
-            return bytesOfKey.ToArray();
+            return key.ConvertKeyFromStringToByteArray().ToArray();
         }
     }
 }

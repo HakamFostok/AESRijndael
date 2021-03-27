@@ -20,14 +20,16 @@ namespace AesRijndaelLibrary
 
         protected AesKeyBase(int keyLength)
         {
-            if ((keyLength == 4) || (keyLength == 6) || (keyLength == 8))
-            {
-                NK = keyLength;
-            }
-            else
-            {
-                throw new ArgumentOutOfRangeException("keyLength", "KeyLength is not 4, 6 or 8");
-            }
+            if (keyLength is not (4 or 6 or 8))
+                throw new ArgumentOutOfRangeException(nameof(keyLength), "KeyLength is not 4, 6 or 8");
+         
+            NK = keyLength;
+        }
+
+        protected AesKeyBase(int keyLength, string key)
+             : this(keyLength)
+        {
+            Subkeys = key.ConvertKeyFromStringToByteArray().ToList();
         }
 
         protected AesKeyBase(int keyLength, byte[] key)

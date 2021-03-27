@@ -34,6 +34,11 @@ namespace AesRijndael.Core
             _aggregator = ContainerLocator.Current.Resolve<IEventAggregator>();
         }
 
+        protected void ShowWindow(string name)
+        {
+            _dialogService.ShowDialog(name, new DialogParameters(), (IDialogResult dialogResult) => { });
+        }
+
         protected void ShowParameterNullError([CallerMemberName] string callerName = null)
         {
             _messageBoxService.ShowError($"Programming Error, parameter for '{callerName}' method is null");

@@ -8,6 +8,7 @@ using Prism.Modularity;
 using Prism.Ioc;
 using Prism.Regions;
 using AesRijndael.MainModule.Views;
+using AesRijndaelLibrary;
 
 namespace AesRijndael.MainModule
 {
@@ -21,6 +22,9 @@ namespace AesRijndael.MainModule
 
         public void RegisterTypes(IContainerRegistry containerRegistry)
         {
+            containerRegistry.RegisterSingleton<IDecreptor, Decreptor>();
+            containerRegistry.RegisterSingleton<IEncryptor, Encryptor>();
+
             containerRegistry.RegisterDialog<AboutView>();
             containerRegistry.RegisterDialog<MainView>();
         }

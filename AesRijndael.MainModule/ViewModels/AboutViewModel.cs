@@ -12,7 +12,7 @@ namespace AesRijndael.MainModule.ViewModels
 {
     public class AboutViewModel : BaseViewModel, IDialogAware
     {
-        public string Title { get; }
+        public string Title => "About Program";
 
         public event Action<IDialogResult> RequestClose;
 

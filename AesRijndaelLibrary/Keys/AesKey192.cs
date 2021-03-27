@@ -7,6 +7,11 @@
         {
         }
 
+        public AesKey192(string key)
+           : base(6, key)
+        {
+        }
+
         public AesKey192()
             : base(6)
         {

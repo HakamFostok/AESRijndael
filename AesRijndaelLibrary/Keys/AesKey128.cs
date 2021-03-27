@@ -8,10 +8,14 @@
 
         }
 
+        public AesKey128(string key)
+           : base(4, key)
+        {
+        }
+
         public AesKey128()
             : base(4)
         {
-            // TODO: Complete member initialization
         }
     }
 }

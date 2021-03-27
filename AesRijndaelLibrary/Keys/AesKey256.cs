@@ -7,6 +7,12 @@
         {
         }
 
+        public AesKey256(string key)
+            : base(8, key)
+        {
+        }
+
+        [System.Obsolete("Must be removed")]
         public AesKey256()
             : base(8)
         {

@@ -12,6 +12,7 @@
 
 	<ItemGroup>
 	  <ProjectReference Include="..\AesRijndael.Core\AesRijndael.Core.csproj" />
+	  <ProjectReference Include="..\AESRijndaelLibrary\AesRijndaelLibrary.csproj" />
 	</ItemGroup>
 
 	<ItemGroup>

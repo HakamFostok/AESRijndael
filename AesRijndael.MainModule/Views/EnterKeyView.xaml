@@ -8,7 +8,7 @@
              prism:ViewModelLocator.AutoWireViewModel="True"
              mc:Ignorable="d" 
              d:DesignHeight="200" d:DesignWidth="800">
-    <GroupBox Header="Key" Margin="0,6,0,-6">
+    <GroupBox Header="{local:Localization KeyTitle}">
         <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition />
@@ -18,16 +18,18 @@
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto"/>
                 <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
             </Grid.ColumnDefinitions>
 
-            <TextBlock Grid.Column="0" Grid.Row="0" Margin="10,0,10,0" Text="{local:Localization Key}"></TextBlock>
+            <TextBlock Grid.Column="0" Grid.Row="0" Margin="10,0,10,0" Text="{local:Localization Key}"/>
             <TextBox Grid.Column="1" Grid.Row="0" Margin="0,0,0,10" Text="{Binding KeyValue}"/>
+            <TextBlock Grid.Column="2" Grid.Row="0" Margin="0,0,0,10" Text="{local:Localization MaxLength}" />
 
             <UniformGrid Grid.Column="1" Grid.Row="1" Columns="3" Rows="2">
                 <Button Margin="2" Content="{local:Localization EncryptDecrypt}"/>
-                <Button Margin="2" Content="{local:Localization Format}"/>
+                <Button Margin="2" Command="{Binding FormatCommand}" Content="{local:Localization Format}"/>
                 <Button Margin="2" Command="{Binding AboutCommand}" Content="{local:Localization About}"/>
-                <Button Margin="2" Content="{local:Localization Clear}"/>
+                <Button Margin="2" Command="{Binding ClearCommand}" Content="{local:Localization Clear}"/>
                 <Button Margin="2" Content="{local:Localization Font}"/>
             </UniformGrid>
         </Grid>

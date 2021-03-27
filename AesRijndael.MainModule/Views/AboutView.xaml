@@ -3,10 +3,42 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:AesRijndael.MainModule.Views"
+             xmlns:prism="http://prismlibrary.com/"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Grid>
-        <TextBlock>About screen</TextBlock>
-    </Grid>
+    
+    <UserControl.Resources>
+        
+        <Style x:Key="topTxtBlock" TargetType="TextBlock">
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="TextAlignment" Value="Right"/>
+        </Style>
+
+        <Style x:Key="centerTxtBlock" TargetType="TextBlock">
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="TextAlignment" Value="Center"/>
+        </Style>
+        
+    </UserControl.Resources>
+    
+    <prism:Dialog.WindowStyle>
+        <Style TargetType="Window">
+            <Setter Property="prism:Dialog.WindowStartupLocation" Value="CenterOwner" />
+            <Setter Property="ResizeMode" Value="NoResize"/>
+            <Setter Property="Width" Value="200"/>
+            <Setter Property="Height" Value="230"/>
+            <Setter Property="ShowInTaskbar" Value="False"/>
+        </Style>
+    </prism:Dialog.WindowStyle>
+    
+    <StackPanel Margin="10">
+        <TextBlock Style="{StaticResource topTxtBlock}">جامعة حلب</TextBlock>
+        <TextBlock Style="{StaticResource topTxtBlock}">كلية الهندسة المعلوماتية</TextBlock>
+        <TextBlock Style="{StaticResource topTxtBlock}">السنة الرابعة - الفصل الأول</TextBlock>
+        <TextBlock Style="{StaticResource topTxtBlock}">2011 - 2012</TextBlock>
+        <TextBlock Style="{StaticResource centerTxtBlock}" Margin="0,20,0,0">مشروع مادة أمن المعلومات</TextBlock>
+        <TextBlock Style="{StaticResource centerTxtBlock}">AES Rijndael : اسم المشروع</TextBlock>
+        <TextBlock Style="{StaticResource centerTxtBlock}">بإشراف الدكتور : محمود شعار</TextBlock>
+        <TextBlock Style="{StaticResource centerTxtBlock}">تنفيذ الطالب : حكم فستق</TextBlock>
+    </StackPanel>
 </UserControl>

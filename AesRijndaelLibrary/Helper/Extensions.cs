@@ -1,10 +1,31 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace AesRijndaelLibrary
 {
     public static class Extensions
     {
         public const int NB = 4;
+
+        public static List<byte> ConvertKeyFromStringToByteArray(this string text)
+        {
+            List<byte> bytes = new();
+
+            try
+            {
+                for (int index = 0; index < text.Length; index += 2)
+                {
+                    bytes.Add(text.Substring(index, 2).GetByteFromHex());
+                }
+                return bytes;
+            }
+            catch (ArgumentOutOfRangeException)
+            {
+                bytes.Add(text[^1].ToString().GetByteFromHex());
+                return bytes;
+            }
+        }
+
 
         public static string GetHexadecimal(this byte value) =>
             BitConverter.ToString(new byte[] { value });
