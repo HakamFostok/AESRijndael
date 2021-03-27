@@ -3,8 +3,6 @@ using System.Windows.Input;
 
 using AesRijndael.Core;
 
-using AesRijndaelLibrary;
-
 using Prism.Commands;
 
 namespace AesRijndael.MainModule.ViewModels

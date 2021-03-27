@@ -22,7 +22,7 @@ namespace AesRijndaelLibrary
         {
             if (keyLength is not (4 or 6 or 8))
                 throw new ArgumentOutOfRangeException(nameof(keyLength), "KeyLength is not 4, 6 or 8");
-         
+
             NK = keyLength;
         }
 

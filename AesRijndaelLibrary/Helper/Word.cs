@@ -18,7 +18,7 @@ namespace AesRijndaelLibrary
         {
             if (fourBytes.Count != 4)
                 throw new ArgumentOutOfRangeException("fourBytes", "Length of fourBytes must be 4");
-            
+
             bytes = new List<byte>();
             bytes.AddRange(fourBytes.Select(n => n));
         }
@@ -53,7 +53,7 @@ namespace AesRijndaelLibrary
 
         internal Word SubWord() =>
             new Word(this.Select(b => Table.SBox[b.GetUpperPart(), b.GetLowerPart()]).ToList());
-        
+
         #region IEnumerable
         IEnumerator<byte> IEnumerable<byte>.GetEnumerator()
         {

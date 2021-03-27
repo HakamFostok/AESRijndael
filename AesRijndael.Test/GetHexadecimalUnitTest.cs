@@ -1,6 +1,8 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using AesRijndaelLibrary;
 using System;
+
+using AesRijndaelLibrary;
+
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace AesRijndael.Test
 {
@@ -13,9 +15,9 @@ namespace AesRijndael.Test
             for (byte i = 0; i < byte.MaxValue; i++)
             {
                 string theByteHexValue = BitConverter.ToString(new byte[] { i });
-                
+
                 var actual = Extensions.GetHexadecimal(i);
-                
+
                 Assert.AreEqual(theByteHexValue.ToLower(), actual.ToLower());
             }
         }

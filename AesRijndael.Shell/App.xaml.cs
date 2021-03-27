@@ -1,7 +1,5 @@
 ﻿using System.Windows;
 
-using AesRijndael.SharedModule;
-
 using Prism.Ioc;
 using Prism.Modularity;
 
@@ -11,7 +9,7 @@ namespace AesRijndael.Shell
     /// <summary>
     /// Interaction logic for App.xaml
     /// </summary>
-    public partial class App 
+    public partial class App
     {
         protected override Window CreateShell()
         {

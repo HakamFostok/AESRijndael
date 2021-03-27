@@ -63,10 +63,10 @@ namespace AesRijndaelLibrary
         {
             if (first == 0 || second == 0)
                 return new BinaryPolynomial(0);
-            
+
             if (first == 1)
                 return new BinaryPolynomial(second);
-            
+
             if (second == 1)
                 return new BinaryPolynomial(first);
 

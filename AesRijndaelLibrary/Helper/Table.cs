@@ -34,6 +34,6 @@ namespace AesRijndaelLibrary
 
         internal byte this[int row, int column] =>
             dataInTable[row][column];
-        
+
     }
 }

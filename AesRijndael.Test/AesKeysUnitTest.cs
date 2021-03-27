@@ -1,6 +1,8 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using AesRijndaelLibrary;
 using System;
+
+using AesRijndaelLibrary;
+
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace AesRijndael.Test
 {
