@@ -21,6 +21,7 @@ namespace AesRijndael.MainModule
 
         public void RegisterTypes(IContainerRegistry containerRegistry)
         {
+            containerRegistry.RegisterDialog<AboutView>();
             containerRegistry.RegisterDialog<MainView>();
         }
     }

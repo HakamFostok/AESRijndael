@@ -10,8 +10,8 @@
              prism:ViewModelLocator.AutoWireViewModel="True">
     <GroupBox Header="{local:Localization Language}">
         <StackPanel Margin="5">
-            <RadioButton IsChecked="{Binding IsArabic}" GroupName="LangType" Content="{local:Localization Arabic}"></RadioButton>
-            <RadioButton IsChecked="{Binding IsEnglish}" GroupName="LangType" Content="{local:Localization English}"></RadioButton>
+            <RadioButton IsChecked="{Binding IsEnglish}" GroupName="LangType" Content="{local:Localization Lang_English}"></RadioButton>
+            <RadioButton IsChecked="{Binding IsArabic}" GroupName="LangType" Content="{local:Localization Lang_Arabic}"></RadioButton>
         </StackPanel>
     </GroupBox>
 </UserControl>

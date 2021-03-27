@@ -26,7 +26,7 @@ namespace AesRijndael.MainModule.ViewModels
             }
         }
 
-        private bool isEnglish;
+        private bool isEnglish = true;
         public bool IsEnglish
         {
             get => isEnglish;

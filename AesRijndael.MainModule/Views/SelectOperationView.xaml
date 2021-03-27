@@ -8,8 +8,8 @@
              d:DesignHeight="450" d:DesignWidth="800">
     <GroupBox Header="{local:Localization Operation}">
         <StackPanel Margin="5">
-            <RadioButton Content="{local:Localization Encrypt}"></RadioButton>
-            <RadioButton Content="{local:Localization Decrept}"></RadioButton>
+            <RadioButton IsChecked="True" Content="{local:Localization Encrypt}"></RadioButton>
+            <RadioButton Content="{local:Localization Decrypt}"></RadioButton>
         </StackPanel>
     </GroupBox>
 </UserControl>
