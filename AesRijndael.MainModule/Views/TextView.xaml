@@ -10,21 +10,21 @@
              d:DesignHeight="450" d:DesignWidth="800">
     <GroupBox Header="{local:Localization TextTitle}">
         <Grid>
-            
+
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            
-            <StackPanel Margin="10" Grid.Column="0">
-                <TextBlock Text="{local:Localization EncryptedText}"/>
-                <TextBox IsReadOnly="{Binding IsEncryptionReadOnly}" />
-            </StackPanel>
 
-            <StackPanel Margin="10" Grid.Column="1">
-                <TextBlock Text="{local:Localization PlainText}"/>
+            <DockPanel Margin="10" Grid.Column="0">
+                <TextBlock DockPanel.Dock="Top" Text="{local:Localization EncryptedText}"/>
+                <TextBox IsReadOnly="{Binding IsEncryptionReadOnly}" />
+            </DockPanel>
+
+            <DockPanel Margin="10" Grid.Column="1">
+                <TextBlock DockPanel.Dock="Top" Text="{local:Localization PlainText}"/>
                 <TextBox IsReadOnly="{Binding IsDecryptionReadOnly}"/>
-            </StackPanel>
+            </DockPanel>
         </Grid>
     </GroupBox>
 </UserControl>
