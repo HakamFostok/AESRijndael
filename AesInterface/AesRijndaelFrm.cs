@@ -48,9 +48,9 @@ namespace AesInterface
 
             algorithms = new List<Tuple<AesBase, AesKeyBase, int, string>>
             {
-                new Tuple<AesBase, AesKeyBase, int, string>(new Aes128(), new AesKey128(), 32, "000102030405060708090a0b0c0d0e0f"),
-                new Tuple<AesBase, AesKeyBase, int, string>(new Aes192(), new AesKey192(), 48, "000102030405060708090a0b0c0d0e0f1011121314151617"),
-                new Tuple<AesBase, AesKeyBase, int, string>(new Aes256(), new AesKey256(), 64, "000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f")
+                new Tuple<AesBase, AesKeyBase, int, string>(new Aes128(), new AesKey128(), 32, "000102030405060708090A0B0C0D0E0F"),
+                new Tuple<AesBase, AesKeyBase, int, string>(new Aes192(), new AesKey192(), 48, "000102030405060708090A0B0C0D0E0F1011121314151617"),
+                new Tuple<AesBase, AesKeyBase, int, string>(new Aes256(), new AesKey256(), 64, "000102030405060708090A0B0C0D0E0F101112131415161718191A1B1C1D1E1F")
             };
 
             currentSettings = new Properties.Settings();

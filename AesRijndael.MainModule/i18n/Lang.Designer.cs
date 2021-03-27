@@ -61,20 +61,65 @@ namespace AesRijndael.MainModule.i18n {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Arabic.
+        ///   Looks up a localized string similar to About Program.
         /// </summary>
-        public static string Arabic {
+        public static string About {
             get {
-                return ResourceManager.GetString("Arabic", resourceCulture);
+                return ResourceManager.GetString("About", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Decrept.
+        ///   Looks up a localized string similar to AES 128.
         /// </summary>
-        public static string Decrept {
+        public static string Aes128 {
             get {
-                return ResourceManager.GetString("Decrept", resourceCulture);
+                return ResourceManager.GetString("Aes128", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to AES 192.
+        /// </summary>
+        public static string Aes192 {
+            get {
+                return ResourceManager.GetString("Aes192", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to AES 156.
+        /// </summary>
+        public static string Aes256 {
+            get {
+                return ResourceManager.GetString("Aes256", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Kind of Algorithm.
+        /// </summary>
+        public static string AesKind {
+            get {
+                return ResourceManager.GetString("AesKind", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Clear.
+        /// </summary>
+        public static string Clear {
+            get {
+                return ResourceManager.GetString("Clear", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Decrypt.
+        /// </summary>
+        public static string Decrypt {
+            get {
+                return ResourceManager.GetString("Decrypt", resourceCulture);
             }
         }
         
@@ -88,20 +133,74 @@ namespace AesRijndael.MainModule.i18n {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to English.
+        ///   Looks up a localized string similar to Encrypt / Decrypt.
         /// </summary>
-        public static string English {
+        public static string EncryptDecrypt {
             get {
-                return ResourceManager.GetString("English", resourceCulture);
+                return ResourceManager.GetString("EncryptDecrypt", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Encrypted Text.
+        /// </summary>
+        public static string EncryptedText {
+            get {
+                return ResourceManager.GetString("EncryptedText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Font.
+        /// </summary>
+        public static string Font {
+            get {
+                return ResourceManager.GetString("Font", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Format.
+        /// </summary>
+        public static string Format {
+            get {
+                return ResourceManager.GetString("Format", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Hexadecimal.
+        /// </summary>
+        public static string Key {
+            get {
+                return ResourceManager.GetString("Key", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Key.
         /// </summary>
-        public static string Key {
+        public static string KeyTitle {
             get {
-                return ResourceManager.GetString("Key", resourceCulture);
+                return ResourceManager.GetString("KeyTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Arabic.
+        /// </summary>
+        public static string Lang_Arabic {
+            get {
+                return ResourceManager.GetString("Lang_Arabic", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to English.
+        /// </summary>
+        public static string Lang_English {
+            get {
+                return ResourceManager.GetString("Lang_English", resourceCulture);
             }
         }
         
@@ -115,11 +214,38 @@ namespace AesRijndael.MainModule.i18n {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Key Lenght.
+        /// </summary>
+        public static string MaxLength {
+            get {
+                return ResourceManager.GetString("MaxLength", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Operation.
         /// </summary>
         public static string Operation {
             get {
                 return ResourceManager.GetString("Operation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Plain Text.
+        /// </summary>
+        public static string PlainText {
+            get {
+                return ResourceManager.GetString("PlainText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Text.
+        /// </summary>
+        public static string TextTitle {
+            get {
+                return ResourceManager.GetString("TextTitle", resourceCulture);
             }
         }
     }

@@ -117,25 +117,67 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Arabic" xml:space="preserve">
-    <value>عربي</value>
+  <data name="About" xml:space="preserve">
+    <value>حول البرنامج</value>
   </data>
-  <data name="Decrept" xml:space="preserve">
-    <value>فك تشفير</value>
+  <data name="Aes128" xml:space="preserve">
+    <value>AES 128</value>
+  </data>
+  <data name="Aes192" xml:space="preserve">
+    <value>AES 192</value>
+  </data>
+  <data name="Aes256" xml:space="preserve">
+    <value>AES 156</value>
+  </data>
+  <data name="AesKind" xml:space="preserve">
+    <value>نوع الخورازمية</value>
+  </data>
+  <data name="Clear" xml:space="preserve">
+    <value>مسح</value>
+  </data>
+  <data name="Decrypt" xml:space="preserve">
+    <value>فك التشفير</value>
   </data>
   <data name="Encrypt" xml:space="preserve">
     <value>تشفير</value>
   </data>
-  <data name="English" xml:space="preserve">
-    <value>انكليزي</value>
+  <data name="EncryptDecrypt" xml:space="preserve">
+    <value>تشفير / فك تشفير</value>
+  </data>
+  <data name="EncryptedText" xml:space="preserve">
+    <value>النص المشفر</value>
+  </data>
+  <data name="Font" xml:space="preserve">
+    <value>الخط</value>
+  </data>
+  <data name="Format" xml:space="preserve">
+    <value>تنسيق</value>
   </data>
   <data name="Key" xml:space="preserve">
-    <value>مفتاح</value>
+    <value>قيم ست عشرية</value>
+  </data>
+  <data name="KeyTitle" xml:space="preserve">
+    <value>المفتاح</value>
   </data>
   <data name="Language" xml:space="preserve">
-    <value>لغة</value>
+    <value>اللغة</value>
+  </data>
+  <data name="Lang_Arabic" xml:space="preserve">
+    <value>عربي</value>
+  </data>
+  <data name="Lang_English" xml:space="preserve">
+    <value>انكليزي</value>
+  </data>
+  <data name="MaxLength" xml:space="preserve">
+    <value>طول المفتاح</value>
   </data>
   <data name="Operation" xml:space="preserve">
-    <value>عملية</value>
+    <value>العملية</value>
+  </data>
+  <data name="PlainText" xml:space="preserve">
+    <value>النص الواضح</value>
+  </data>
+  <data name="TextTitle" xml:space="preserve">
+    <value>النص</value>
   </data>
 </root>

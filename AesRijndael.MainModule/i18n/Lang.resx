@@ -117,25 +117,67 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Arabic" xml:space="preserve">
-    <value>Arabic</value>
+  <data name="About" xml:space="preserve">
+    <value>About Program</value>
   </data>
-  <data name="Decrept" xml:space="preserve">
-    <value>Decrept</value>
+  <data name="Aes128" xml:space="preserve">
+    <value>AES 128</value>
+  </data>
+  <data name="Aes192" xml:space="preserve">
+    <value>AES 192</value>
+  </data>
+  <data name="Aes256" xml:space="preserve">
+    <value>AES 156</value>
+  </data>
+  <data name="AesKind" xml:space="preserve">
+    <value>Kind of Algorithm</value>
+  </data>
+  <data name="Clear" xml:space="preserve">
+    <value>Clear</value>
+  </data>
+  <data name="Decrypt" xml:space="preserve">
+    <value>Decrypt</value>
   </data>
   <data name="Encrypt" xml:space="preserve">
     <value>Encrypt</value>
   </data>
-  <data name="English" xml:space="preserve">
-    <value>English</value>
+  <data name="EncryptDecrypt" xml:space="preserve">
+    <value>Encrypt / Decrypt</value>
+  </data>
+  <data name="EncryptedText" xml:space="preserve">
+    <value>Encrypted Text</value>
+  </data>
+  <data name="Font" xml:space="preserve">
+    <value>Font</value>
+  </data>
+  <data name="Format" xml:space="preserve">
+    <value>Format</value>
   </data>
   <data name="Key" xml:space="preserve">
+    <value>Hexadecimal</value>
+  </data>
+  <data name="KeyTitle" xml:space="preserve">
     <value>Key</value>
   </data>
   <data name="Language" xml:space="preserve">
     <value>Language</value>
   </data>
+  <data name="Lang_Arabic" xml:space="preserve">
+    <value>Arabic</value>
+  </data>
+  <data name="Lang_English" xml:space="preserve">
+    <value>English</value>
+  </data>
+  <data name="MaxLength" xml:space="preserve">
+    <value>Key Lenght</value>
+  </data>
   <data name="Operation" xml:space="preserve">
     <value>Operation</value>
+  </data>
+  <data name="PlainText" xml:space="preserve">
+    <value>Plain Text</value>
+  </data>
+  <data name="TextTitle" xml:space="preserve">
+    <value>Text</value>
   </data>
 </root>
