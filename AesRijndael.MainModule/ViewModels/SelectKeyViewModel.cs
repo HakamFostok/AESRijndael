@@ -11,17 +11,24 @@ namespace AesRijndael.MainModule.ViewModels
         private string keyValue;
         private AesKeyBase algoType;
 
-        private bool isAes128;
+        private bool isAes128 = true;
         public bool IsAes128
         {
             get => isAes128;
             set
             {
                 SetProperty(ref isAes128, value);
-                if (value is true)
+                if (value is true && !string.IsNullOrEmpty(keyValue))
                 {
-                    algoType = new AesKey128(keyValue);
-                    _aggregator.GetEvent<AlgorithmKindChangedEvent>().Publish(algoType);
+                    try
+                    {
+                        algoType = new AesKey128(keyValue);
+                        _aggregator.GetEvent<AlgorithmKindChangedEvent>().Publish(algoType);
+                    }
+                    catch (Exception ex)
+                    {
+                        HandleException(ex);
+                    }
                 }
             }
         }
@@ -33,10 +40,17 @@ namespace AesRijndael.MainModule.ViewModels
             set
             {
                 SetProperty(ref isAes192, value);
-                if (value is true)
+                if (value is true && !string.IsNullOrEmpty(keyValue))
                 {
-                    algoType = new AesKey192(keyValue);
-                    _aggregator.GetEvent<AlgorithmKindChangedEvent>().Publish(algoType);
+                    try
+                    {
+                        algoType = new AesKey192(keyValue);
+                        _aggregator.GetEvent<AlgorithmKindChangedEvent>().Publish(algoType);
+                    }
+                    catch (Exception ex)
+                    {
+                        HandleException(ex);
+                    }
                 }
             }
         }
@@ -48,10 +62,17 @@ namespace AesRijndael.MainModule.ViewModels
             set
             {
                 SetProperty(ref isAes256, value);
-                if (value is true)
+                if (value is true && !string.IsNullOrEmpty(keyValue))
                 {
-                    algoType = new AesKey256(keyValue);
-                    _aggregator.GetEvent<AlgorithmKindChangedEvent>().Publish(algoType);
+                    try
+                    {
+                        algoType = new AesKey256(keyValue);
+                        _aggregator.GetEvent<AlgorithmKindChangedEvent>().Publish(algoType);
+                    }
+                    catch (Exception ex)
+                    {
+                        HandleException(ex);
+                    }
                 }
             }
         }

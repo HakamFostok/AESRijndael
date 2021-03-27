@@ -78,7 +78,11 @@ namespace AesRijndael.MainModule.ViewModels
 
         private void ClearTextEventHandler()
         {
+            if (_operation == Operation.Encryption)
+                TextToEncrypt = "";
 
+            if (_operation == Operation.Decryption)
+                TextToDecrypt = "";
         }
     }
 }
