@@ -2,14 +2,13 @@
 
 using NLog;
 
-namespace AesRijndael.SharedModule
+namespace AesRijndael.SharedModule;
+
+public class LogService : ILogService
 {
-    public class LogService : ILogService
+    public void LogError(string log)
     {
-        public void LogError(string log)
-        {
-            Logger logger = LogManager.GetCurrentClassLogger();
-            logger.Error(log);
-        }
+        Logger logger = LogManager.GetCurrentClassLogger();
+        logger.Error(log);
     }
 }

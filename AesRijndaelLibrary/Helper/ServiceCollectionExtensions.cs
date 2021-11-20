@@ -1,13 +1,12 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 
-namespace AesRijndaelLibrary
+namespace AesRijndaelLibrary;
+
+public static class ServiceCollectionExtensions
 {
-    public static class ServiceCollectionExtensions
+    public static void RegisterEncryptionDecrptionServices(this IServiceCollection serviceCollection)
     {
-        public static void RegisterEncryptionDecrptionServices(this IServiceCollection serviceCollection)
-        {
-            serviceCollection.AddScoped<IEncryptor, Encryptor>();
-            serviceCollection.AddScoped<IDecreptor, Decreptor>();
-        }
+        serviceCollection.AddScoped<IEncryptor, Encryptor>();
+        serviceCollection.AddScoped<IDecreptor, Decreptor>();
     }
 }

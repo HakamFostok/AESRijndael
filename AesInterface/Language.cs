@@ -1,8 +1,7 @@
-﻿namespace AesInterface
+﻿namespace AesInterface;
+
+internal enum Language
 {
-    internal enum Language
-    {
-        Arabic,
-        English
-    }
+    Arabic,
+    English
 }

@@ -4,23 +4,22 @@ using AesRijndaelLibrary;
 
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace AesRijndael.Test
+namespace AesRijndael.Test;
+
+[TestClass]
+public class GetHexadecimalUnitTest
 {
-    [TestClass]
-    public class GetHexadecimalUnitTest
+    [TestMethod]
+    public void GetByteFromHex_Bytes_Success()
     {
-        [TestMethod]
-        public void GetByteFromHex_Bytes_Success()
+        for (byte i = 0; i < byte.MaxValue; i++)
         {
-            for (byte i = 0; i < byte.MaxValue; i++)
-            {
-                string theByteHexValue = BitConverter.ToString(new byte[] { i });
+            string theByteHexValue = BitConverter.ToString(new byte[] { i });
 
-                var actual = Extensions.GetHexadecimal(i);
+            string actual = Extensions.GetHexadecimal(i);
 
-                Assert.AreEqual(theByteHexValue.ToLower(), actual.ToLower());
-            }
+            Assert.AreEqual(theByteHexValue.ToLower(), actual.ToLower());
         }
-
     }
+
 }

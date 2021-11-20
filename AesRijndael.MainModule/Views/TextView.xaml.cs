@@ -1,15 +1,14 @@
 ﻿using System.Windows.Controls;
 
-namespace AesRijndael.MainModule.Views
+namespace AesRijndael.MainModule.Views;
+
+/// <summary>
+/// Interaction logic for TextView.xaml
+/// </summary>
+public partial class TextView : UserControl
 {
-    /// <summary>
-    /// Interaction logic for TextView.xaml
-    /// </summary>
-    public partial class TextView : UserControl
+    public TextView()
     {
-        public TextView()
-        {
-            InitializeComponent();
-        }
+        InitializeComponent();
     }
 }
