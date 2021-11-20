@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.31025.194
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31912.275
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AesRijndaelLibrary", "AESRijndaelLibrary\AesRijndaelLibrary.csproj", "{CEBF5196-9675-4B60-BAAD-71136441BF64}"
 EndProject
@@ -10,6 +10,10 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AesInterface", "AESInterface\AesInterface.csproj", "{F162C1DA-D60C-4DE5-AF97-EE0C6AFC407E}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SoluionItems", "SoluionItems", "{A7AA5E1A-A22D-486E-9606-3B2A487946DD}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+		Directory.Build.props = Directory.Build.props
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docs", "Docs", "{754F426D-73F7-44E2-A02E-A5689EDCA103}"
 	ProjectSection(SolutionItems) = preProject
@@ -21,13 +25,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AesRijndael.Test", "AesRijn
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Wpf", "Wpf", "{89C4EA8F-FF2D-4B26-8C3A-777CEE2C6FFE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AesRijndael.Shell", "AesRijndael.Shell\AesRijndael.Shell.csproj", "{A20C6BD2-577D-4856-8778-42E2E1495433}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AesRijndael.Shell", "AesRijndael.Shell\AesRijndael.Shell.csproj", "{A20C6BD2-577D-4856-8778-42E2E1495433}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AesRijndael.Core", "AesRijndael.Core\AesRijndael.Core.csproj", "{20D6A6A1-2152-48D0-989F-B9E666BC95F8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AesRijndael.Core", "AesRijndael.Core\AesRijndael.Core.csproj", "{20D6A6A1-2152-48D0-989F-B9E666BC95F8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AesRijndael.MainModule", "AesRijndael.MainModule\AesRijndael.MainModule.csproj", "{B8349FD1-C41B-4B14-8B55-77C7F1FA061D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AesRijndael.MainModule", "AesRijndael.MainModule\AesRijndael.MainModule.csproj", "{B8349FD1-C41B-4B14-8B55-77C7F1FA061D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AesRijndael.SharedModule", "AesRijndael.SharedModule\AesRijndael.SharedModule.csproj", "{50180DF1-9C54-4292-8919-2E3EFE6DBA52}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AesRijndael.SharedModule", "AesRijndael.SharedModule\AesRijndael.SharedModule.csproj", "{50180DF1-9C54-4292-8919-2E3EFE6DBA52}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
