@@ -1,6 +1,5 @@
-﻿namespace AesRijndael.MainModule.ViewModels
+﻿namespace AesRijndael.MainModule.ViewModels;
+
+class MainViewModel
 {
-    class MainViewModel
-    {
-    }
 }

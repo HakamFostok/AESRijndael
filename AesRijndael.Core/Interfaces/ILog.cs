@@ -1,7 +1,6 @@
-﻿namespace AesRijndael.Core
+﻿namespace AesRijndael.Core;
+
+public interface ILogService
 {
-    public interface ILogService
-    {
-        void LogError(string log);
-    }
+    void LogError(string log);
 }

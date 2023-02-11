@@ -1,15 +1,14 @@
 ﻿using System.Windows.Controls;
 
-namespace AesRijndael.MainModule.Views
+namespace AesRijndael.MainModule.Views;
+
+/// <summary>
+/// Interaction logic for KeyView.xaml
+/// </summary>
+public partial class EnterKeyView : UserControl
 {
-    /// <summary>
-    /// Interaction logic for KeyView.xaml
-    /// </summary>
-    public partial class EnterKeyView : UserControl
+    public EnterKeyView()
     {
-        public EnterKeyView()
-        {
-            InitializeComponent();
-        }
+        InitializeComponent();
     }
 }

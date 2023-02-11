@@ -1,12 +1,11 @@
 ﻿using System.Windows.Forms;
 
-namespace AesInterface
+namespace AesInterface;
+
+public partial class AboutFrm : Form
 {
-    public partial class AboutFrm : Form
+    public AboutFrm()
     {
-        public AboutFrm()
-        {
-            InitializeComponent();
-        }
+        InitializeComponent();
     }
 }

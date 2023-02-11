@@ -1,15 +1,14 @@
 ﻿using System.Windows.Controls;
 
-namespace AesRijndael.MainModule.Views
+namespace AesRijndael.MainModule.Views;
+
+/// <summary>
+/// Interaction logic for SelectOperationView.xaml
+/// </summary>
+public partial class SelectOperationView : UserControl
 {
-    /// <summary>
-    /// Interaction logic for SelectOperationView.xaml
-    /// </summary>
-    public partial class SelectOperationView : UserControl
+    public SelectOperationView()
     {
-        public SelectOperationView()
-        {
-            InitializeComponent();
-        }
+        InitializeComponent();
     }
 }

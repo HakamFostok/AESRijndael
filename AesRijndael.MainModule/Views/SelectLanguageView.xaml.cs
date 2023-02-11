@@ -1,15 +1,14 @@
 ﻿using System.Windows.Controls;
 
-namespace AesRijndael.MainModule.Views
+namespace AesRijndael.MainModule.Views;
+
+/// <summary>
+/// Interaction logic for SelectLanguageView.xaml
+/// </summary>
+public partial class SelectLanguageView : UserControl
 {
-    /// <summary>
-    /// Interaction logic for SelectLanguageView.xaml
-    /// </summary>
-    public partial class SelectLanguageView : UserControl
+    public SelectLanguageView()
     {
-        public SelectLanguageView()
-        {
-            InitializeComponent();
-        }
+        InitializeComponent();
     }
 }
